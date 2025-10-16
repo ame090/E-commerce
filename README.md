@@ -1,66 +1,302 @@
-<<<<<<< HEAD
-# E-commerce
-Intern Project
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Multi-Vendor E-commerce Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A comprehensive multi-vendor e-commerce web application built with Laravel 11, featuring role-based access control, ToyyibPay payment integration, and a modern responsive UI with Tailwind CSS.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### User Roles
+- **Admin**: Complete system management and oversight
+- **Seller**: Manage products, orders, and shop
+- **Customer**: Browse, purchase, and review products
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Core Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### 🔐 Authentication & Authorization
+- Register, Login, Logout
+- Role-based redirects (Admin → Dashboard, Seller → Seller Panel, Customer → Home)
+- Forgot/Reset password functionality
+- Profile management
 
-## Learning Laravel
+#### 🛒 Customer Features
+- Browse and search products by category or keyword
+- View detailed product information (images, price, seller info)
+- Shopping cart management (add, update, remove items)
+- Secure checkout with ToyyibPay payment gateway
+- Order history and tracking
+- Delivery status tracking
+- Wishlist functionality
+- Product reviews and ratings
+- Seller profile/shop pages
+- Support ticket system
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### 🏪 Seller Features
+- Seller registration (requires admin approval)
+- Shop profile management (name, description, banner)
+- Product CRUD operations
+- Stock and pricing management
+- Order processing and management
+- Order status updates (processing, shipped, delivered)
+- Sales summary and earnings dashboard
+- Customer message/ticket responses
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### 🧑‍💼 Admin Features
+- User management (approve sellers, suspend accounts)
+- Product approval and management
+- Order oversight and status updates
+- Payment verification (ToyyibPay transactions)
+- Category, tag, and attribute management
+- Coupon/discount/promotion management
+- Review and rating moderation
+- Support ticket management
+- Analytics dashboard (sales, top sellers, top products)
+- System settings management
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 💳 Payment Integration
+- ToyyibPay payment gateway integration
+- Secure payment redirection
+- Automatic order and payment status updates
+- Payment reference tracking
+- Email notifications for customers and sellers
 
-## Laravel Sponsors
+## 🛠️ Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Framework**: Laravel 11
+- **Database**: MySQL
+- **Frontend**: Blade Templates + Tailwind CSS
+- **Authentication**: Laravel Breeze
+- **Payment Gateway**: ToyyibPay
+- **Architecture**: MVC with Repository Pattern
 
-### Premium Partners
+## 📦 Database Schema
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Tables
+- `users` - User accounts with role-based access
+- `sellers` - Seller profiles and shop information
+- `categories` - Product categories (hierarchical)
+- `products` - Product listings with images and details
+- `carts` - Shopping cart management
+- `cart_items` - Cart item details
+- `orders` - Order information
+- `order_items` - Order line items
+- `payments` - Payment transaction records
+- `reviews` - Product reviews and ratings
+- `promotions` - Discount codes and promotions
+- `tickets` - Customer support tickets
+- `notifications` - User notifications
+- `wishlists` - User wishlists
 
-## Contributing
+## 🚀 Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prerequisites
+- PHP 8.2 or higher
+- Composer
+- MySQL 5.7 or higher
+- Node.js & NPM
 
-## Code of Conduct
+### Setup Steps
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Clone the repository**
+```bash
+git clone <repository-url>
+cd ecommerce
+```
 
-## Security Vulnerabilities
+2. **Install PHP dependencies**
+```bash
+composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. **Install NPM dependencies**
+```bash
+npm install
+```
 
-## License
+4. **Configure environment**
+```bash
+cp .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> master
+5. **Update .env file**
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ecommerce
+DB_USERNAME=root
+DB_PASSWORD=your_password
+
+TOYYIBPAY_CATEGORY_CODE=your_category_code
+TOYYIBPAY_SECRET_KEY=your_secret_key
+```
+
+6. **Generate application key**
+```bash
+php artisan key:generate
+```
+
+7. **Run migrations and seeders**
+```bash
+php artisan migrate:fresh --seed
+```
+
+8. **Create storage link**
+```bash
+php artisan storage:link
+```
+
+9. **Build assets**
+```bash
+npm run build
+```
+
+10. **Start development server**
+```bash
+php artisan serve
+```
+
+Visit `http://localhost:8000` in your browser.
+
+## 👥 Default Users
+
+After running seeders, you can login with these accounts:
+
+### Admin
+- Email: `admin@ecommerce.com`
+- Password: `password`
+
+### Sellers
+- Email: `seller1@example.com` / `seller2@example.com` / `seller3@example.com`
+- Password: `password`
+
+### Customers
+- Email: `customer1@example.com` through `customer10@example.com`
+- Password: `password`
+
+## 🔧 Configuration
+
+### ToyyibPay Setup
+
+1. Register at [ToyyibPay](https://toyyibpay.com)
+2. Get your Category Code and Secret Key
+3. Update `.env` file with your credentials:
+```env
+TOYYIBPAY_CATEGORY_CODE=your_category_code
+TOYYIBPAY_SECRET_KEY=your_secret_key
+```
+
+### File Storage
+
+Product images are stored in `storage/app/public/products`. Ensure the storage link is created:
+```bash
+php artisan storage:link
+```
+
+## 📁 Project Structure
+
+```
+app/
+├── Http/
+│   ├── Controllers/
+│   │   ├── Admin/          # Admin controllers
+│   │   ├── Seller/         # Seller controllers
+│   │   └── ...             # Public controllers
+│   └── Middleware/
+│       ├── AdminMiddleware.php
+│       ├── SellerMiddleware.php
+│       └── CustomerMiddleware.php
+├── Models/                 # Eloquent models
+database/
+├── migrations/            # Database migrations
+└── seeders/              # Database seeders
+resources/
+├── views/
+│   ├── admin/            # Admin views
+│   ├── seller/           # Seller views
+│   ├── products/         # Product views
+│   ├── cart/             # Cart views
+│   └── ...
+routes/
+└── web.php               # Application routes
+```
+
+## 🎨 Key Features Implementation
+
+### Role-Based Access Control
+Middleware protects routes based on user roles:
+- `admin` - Admin only routes
+- `seller` - Seller only routes
+- `customer` - Customer only routes
+
+### Multi-Vendor Order System
+Orders are automatically split by seller, allowing:
+- Independent order processing per seller
+- Separate payment tracking
+- Individual seller analytics
+
+### Payment Flow
+1. Customer places order
+2. Redirected to ToyyibPay
+3. Payment processed
+4. Callback updates order status
+5. Email notifications sent
+
+## 🧪 Testing
+
+Run PHPUnit tests:
+```bash
+php artisan test
+```
+
+## 🔒 Security Features
+
+- CSRF protection on all forms
+- XSS protection via Blade templating
+- SQL injection prevention via Eloquent ORM
+- Password hashing with bcrypt
+- Role-based authorization
+- Secure payment processing
+
+## 📱 Responsive Design
+
+The application is fully responsive using Tailwind CSS, supporting:
+- Desktop
+- Tablet
+- Mobile devices
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is open-sourced software licensed under the MIT license.
+
+## 🐛 Known Issues
+
+None at the moment. Please report any issues you encounter.
+
+## 📞 Support
+
+For support, please create a ticket through the support system or contact the administrator.
+
+## 🎯 Future Enhancements
+
+- [ ] Real-time notifications using WebSockets
+- [ ] Advanced analytics and reporting
+- [ ] Multi-language support
+- [ ] Mobile app (React Native/Flutter)
+- [ ] Social media integration
+- [ ] Advanced search with filters
+- [ ] Product variants and options
+- [ ] Bulk product import/export
+- [ ] Seller subscription plans
+- [ ] Advanced shipping options
+
+---
+
+Built with ❤️ using Laravel 11
