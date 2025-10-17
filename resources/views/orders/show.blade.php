@@ -1,10 +1,10 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('orders.index') }}" class="text-blue-600 hover:underline">← Back to Orders</a>
+            <a href="{{ route('orders.index') }}" class="text-teal-600 hover:underline">← Back to Orders</a>
         </div>
 
         <div class="flex justify-between items-start mb-8">
@@ -34,14 +34,14 @@
                                 @endif
                                 
                                 <div class="flex-1">
-                                    <a href="{{ route('products.show', $item->product->slug) }}" class="font-semibold hover:text-blue-600">{{ $item->product->name }}</a>
+                                    <a href="{{ route('products.show', $item->product->slug) }}" class="font-semibold hover:text-teal-600">{{ $item->product->name }}</a>
                                     <p class="text-sm text-gray-600">Qty: {{ $item->quantity }} x RM {{ number_format($item->price, 2) }}</p>
                                 </div>
 
                                 <div class="text-right">
                                     <p class="font-bold">RM {{ number_format($item->total, 2) }}</p>
                                     @if($order->status == 'delivered')
-                                        <a href="{{ route('reviews.create', ['order' => $order, 'product' => $item->product]) }}" class="text-sm text-blue-600 hover:underline">Write Review</a>
+                                        <a href="{{ route('reviews.create', ['order' => $order, 'product' => $item->product]) }}" class="text-sm text-teal-600 hover:underline">Write Review</a>
                                     @endif
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                     <div class="border-t pt-4 mb-4">
                         <div class="flex justify-between font-bold text-lg">
                             <span>Total</span>
-                            <span class="text-blue-600">RM {{ number_format($order->total, 2) }}</span>
+                            <span class="text-teal-600">RM {{ number_format($order->total, 2) }}</span>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@
                     </div>
 
                     @if($order->payment_status == 'pending')
-                        <a href="{{ route('payment.index', $order) }}" class="block w-full bg-blue-600 text-white text-center px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">Pay Now</a>
+                        <a href="{{ route('payment.index', $order) }}" class="block w-full bg-emerald-600 text-white text-center px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">Pay Now</a>
                     @endif
                 </div>
             </div>

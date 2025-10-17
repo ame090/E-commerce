@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -21,7 +21,7 @@
                                        ($order->status == 'cancelled' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800') }}">
                                     {{ ucfirst($order->status) }}
                                 </span>
-                                <p class="text-lg font-bold text-blue-600 mt-2">RM {{ number_format($order->total, 2) }}</p>
+                                <p class="text-lg font-bold text-teal-600 mt-2">RM {{ number_format($order->total, 2) }}</p>
                             </div>
                         </div>
 
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="mt-4 flex space-x-2">
-                            <a href="{{ route('orders.show', $order) }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</a>
+                            <a href="{{ route('orders.show', $order) }}" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">View Details</a>
                             @if($order->status == 'pending' || $order->status == 'processing')
                                 <form action="{{ route('orders.cancel', $order) }}" method="POST">
                                     @csrf
@@ -65,7 +65,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
                 <h2 class="text-2xl font-semibold text-gray-600 mt-4">No orders yet</h2>
-                <a href="{{ route('products.index') }}" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Start Shopping</a>
+                <a href="{{ route('products.index') }}" class="inline-block mt-6 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700">Start Shopping</a>
             </div>
         @endif
     </div>

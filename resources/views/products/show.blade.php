@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -52,7 +52,7 @@
 
                 <div class="mb-6">
                     <div class="flex items-center space-x-4">
-                        <span class="text-4xl font-bold text-blue-600">RM {{ number_format($product->price, 2) }}</span>
+                        <span class="text-4xl font-bold text-teal-600">RM {{ number_format($product->price, 2) }}</span>
                         @if($product->compare_price)
                             <span class="text-2xl text-gray-500 line-through">RM {{ number_format($product->compare_price, 2) }}</span>
                         @endif
@@ -107,7 +107,7 @@
                                     <input type="number" name="quantity" id="quantity" value="1" min="1" max="{{ $product->stock }}" class="w-20 rounded-md border-gray-300">
                                 </div>
                                 <div class="flex space-x-4">
-                                    <button type="submit" class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">Add to Cart</button>
+                                    <button type="submit" class="flex-1 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">Add to Cart</button>
                                 </div>
                             </form>
                             <form action="{{ route('wishlist.toggle', $product) }}" method="POST" class="mb-4">
@@ -132,7 +132,7 @@
                         </a>
                     @endif
                 @else
-                    <a href="{{ route('login') }}" class="block bg-blue-600 text-white text-center px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">Login to Purchase</a>
+                    <a href="{{ route('login') }}" class="block bg-emerald-600 text-white text-center px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">Login to Purchase</a>
                 @endauth
             </div>
         </div>
@@ -173,7 +173,7 @@
                                 @endif
                                 <div class="p-4">
                                     <h3 class="font-semibold mb-2">{{ $related->name }}</h3>
-                                    <span class="text-lg font-bold text-blue-600">RM {{ number_format($related->price, 2) }}</span>
+                                    <span class="text-lg font-bold text-teal-600">RM {{ number_format($related->price, 2) }}</span>
                                 </div>
                             </a>
                         </div>

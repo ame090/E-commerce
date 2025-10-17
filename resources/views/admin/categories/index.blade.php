@@ -1,11 +1,11 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-bold">Manage Categories</h1>
-            <a href="{{ route('admin.categories.create') }}" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+            <a href="{{ route('admin.categories.create') }}" class="bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                 + Add Category
             </a>
         </div>
@@ -67,7 +67,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
                 </svg>
                 <h2 class="text-2xl font-semibold text-gray-600 mt-4">No categories yet</h2>
-                <a href="{{ route('admin.categories.create') }}" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Add First Category</a>
+                <a href="{{ route('admin.categories.create') }}" class="inline-block mt-6 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700">Add First Category</a>
             </div>
         @endif
     </div>

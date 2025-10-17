@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -30,9 +30,9 @@
                 <input type="hidden" name="product_id" value="{{ $product->id }}">
 
                 <div>
-                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message *</label>
+                    <label for="message" class="block text-sm font-medium text-black-700 mb-2">Your Message *</label>
                     <textarea id="message" name="message" required rows="6" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="Ask about the product, shipping, or any questions...">{{ old('message') }}</textarea>
                     @error('message')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="flex space-x-4">
-                    <button type="submit" class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                    <button type="submit" class="flex-1 bg-emerald-600 text-black px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                         Send Message
                     </button>
                     <a href="{{ route('products.show', $product->slug) }}" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-300">

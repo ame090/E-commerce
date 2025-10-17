@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -73,7 +73,7 @@
                                         
                                         <form action="{{ route('admin.products.toggle-featured', $product) }}" method="POST" class="inline">
                                             @csrf
-                                            <button type="submit" class="text-blue-600 hover:text-blue-900">
+                                            <button type="submit" class="text-teal-600 hover:text-blue-900">
                                                 {{ $product->is_featured ? 'Unfeature' : 'Feature' }}
                                             </button>
                                         </form>

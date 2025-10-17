@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -7,16 +7,16 @@
 
         <!-- Filter Tabs -->
         <div class="mb-6 flex space-x-4 border-b">
-            <a href="{{ route('admin.tickets.index') }}" class="px-4 py-2 border-b-2 {{ !request('status') ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
+            <a href="{{ route('admin.tickets.index') }}" class="px-4 py-2 border-b-2 {{ !request('status') ? 'border-emerald-600 text-teal-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
                 All Tickets
             </a>
-            <a href="{{ route('admin.tickets.index', ['status' => 'open']) }}" class="px-4 py-2 border-b-2 {{ request('status') == 'open' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
+            <a href="{{ route('admin.tickets.index', ['status' => 'open']) }}" class="px-4 py-2 border-b-2 {{ request('status') == 'open' ? 'border-emerald-600 text-teal-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
                 Open
             </a>
-            <a href="{{ route('admin.tickets.index', ['status' => 'in_progress']) }}" class="px-4 py-2 border-b-2 {{ request('status') == 'in_progress' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
+            <a href="{{ route('admin.tickets.index', ['status' => 'in_progress']) }}" class="px-4 py-2 border-b-2 {{ request('status') == 'in_progress' ? 'border-emerald-600 text-teal-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
                 In Progress
             </a>
-            <a href="{{ route('admin.tickets.index', ['status' => 'closed']) }}" class="px-4 py-2 border-b-2 {{ request('status') == 'closed' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
+            <a href="{{ route('admin.tickets.index', ['status' => 'closed']) }}" class="px-4 py-2 border-b-2 {{ request('status') == 'closed' ? 'border-emerald-600 text-teal-600' : 'border-transparent text-gray-600 hover:text-gray-900' }}">
                 Closed
             </a>
         </div>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="text-right ml-4">
                                 <p class="text-sm text-gray-500 mb-2">{{ $ticket->created_at->diffForHumans() }}</p>
-                                <a href="{{ route('admin.tickets.show', $ticket) }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm inline-block">
+                                <a href="{{ route('admin.tickets.show', $ticket) }}" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 text-sm inline-block">
                                     View & Reply
                                 </a>
                             </div>

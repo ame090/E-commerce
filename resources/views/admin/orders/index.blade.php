@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -22,7 +22,7 @@
                                        ($order->status == 'cancelled' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800') }}">
                                     {{ ucfirst($order->status) }}
                                 </span>
-                                <p class="text-lg font-bold text-blue-600">RM {{ number_format($order->total, 2) }}</p>
+                                <p class="text-lg font-bold text-teal-600">RM {{ number_format($order->total, 2) }}</p>
                                 <span class="inline-block px-3 py-1 rounded text-sm font-semibold
                                     {{ $order->payment_status == 'paid' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
                                     {{ ucfirst($order->payment_status) }}
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="flex space-x-2">
-                            <a href="{{ route('admin.orders.show', $order) }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</a>
+                            <a href="{{ route('admin.orders.show', $order) }}" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">View Details</a>
                         </div>
                     </div>
                 @endforeach

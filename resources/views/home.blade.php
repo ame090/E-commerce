@@ -1,13 +1,13 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Our Multi-Vendor Marketplace</h1>
             <p class="text-xl mb-8">Discover thousands of products from verified sellers</p>
-            <a href="{{ route('products.index') }}" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Browse Products</a>
+            <a href="{{ route('products.index') }}" class="bg-white text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50">Browse Products</a>
         </div>
     </div>
 
@@ -43,7 +43,7 @@
                                     <h3 class="font-semibold text-lg mb-2">{{ $product->name }}</h3>
                                     <p class="text-sm text-gray-600 mb-2">by {{ $product->seller->shop_name }}</p>
                                     <div class="flex items-center justify-between">
-                                        <span class="text-xl font-bold text-blue-600">RM {{ number_format($product->price, 2) }}</span>
+                                        <span class="text-xl font-bold text-teal-600">RM {{ number_format($product->price, 2) }}</span>
                                         @if($product->compare_price)
                                             <span class="text-sm text-gray-500 line-through">RM {{ number_format($product->compare_price, 2) }}</span>
                                         @endif
@@ -73,9 +73,9 @@
                             <h3 class="font-semibold text-lg mb-2">{{ $product->name }}</h3>
                             <p class="text-sm text-gray-600 mb-2">by {{ $product->seller->shop_name }}</p>
                             <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-blue-600">RM {{ number_format($product->price, 2) }}</span>
+                                <span class="text-xl font-bold text-teal-600">RM {{ number_format($product->price, 2) }}</span>
                                 @if($product->inStock())
-                                    <span class="text-sm text-green-600">In Stock</span>
+                                    <span class="text-sm text-emerald-600">In Stock</span>
                                 @else
                                     <span class="text-sm text-red-600">Out of Stock</span>
                                 @endif

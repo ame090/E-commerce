@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -19,7 +19,7 @@
                                 <h3 class="font-semibold text-lg mb-2">{{ $wishlist->product->name }}</h3>
                                 <p class="text-sm text-gray-600 mb-2">by {{ $wishlist->product->seller->shop_name }}</p>
                                 <div class="flex items-center justify-between mb-4">
-                                    <span class="text-xl font-bold text-blue-600">RM {{ number_format($wishlist->product->price, 2) }}</span>
+                                    <span class="text-xl font-bold text-teal-600">RM {{ number_format($wishlist->product->price, 2) }}</span>
                                     @if($wishlist->product->inStock())
                                         <span class="text-sm text-green-600">In Stock</span>
                                     @else
@@ -34,7 +34,7 @@
                                 <form action="{{ route('cart.add', $wishlist->product) }}" method="POST" class="flex-1">
                                     @csrf
                                     <input type="hidden" name="quantity" value="1">
-                                    <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Add to Cart</button>
+                                    <button type="submit" class="w-full bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 text-sm">Add to Cart</button>
                                 </form>
                             @endif
                             
@@ -57,7 +57,7 @@
                 </svg>
                 <h2 class="text-2xl font-semibold text-gray-600 mt-4">Your wishlist is empty</h2>
                 <p class="text-gray-500 mt-2">Save products you love for later</p>
-                <a href="{{ route('products.index') }}" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Browse Products</a>
+                <a href="{{ route('products.index') }}" class="inline-block mt-6 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700">Browse Products</a>
             </div>
         @endif
     </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -16,7 +16,7 @@
                 <p class="text-sm text-gray-600">Status: <span class="font-medium text-yellow-600">{{ ucfirst(auth()->user()->seller->status) }}</span></p>
             </div>
 
-            <a href="{{ route('home') }}" class="inline-block mt-8 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Return to Home</a>
+            <a href="{{ route('home') }}" class="inline-block mt-8 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700">Return to Home</a>
         </div>
     </div>
 </div>

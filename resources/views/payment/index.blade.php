@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -11,7 +11,7 @@
         <div class="bg-gray-50 p-8 rounded-lg mb-8">
             <div class="flex justify-between items-center mb-6">
                 <span class="text-lg font-semibold">Total Amount</span>
-                <span class="text-3xl font-bold text-blue-600">RM {{ number_format($order->total, 2) }}</span>
+                <span class="text-3xl font-bold text-teal-600">RM {{ number_format($order->total, 2) }}</span>
             </div>
 
             <div class="border-t pt-4 space-y-2 text-sm">
@@ -37,13 +37,13 @@
 
         <form action="{{ route('payment.create', $order) }}" method="POST">
             @csrf
-            <button type="submit" class="w-full bg-blue-600 text-white px-6 py-4 rounded-lg hover:bg-blue-700 font-semibold text-lg">
+            <button type="submit" class="w-full bg-emerald-600 text-white px-6 py-4 rounded-lg hover:bg-emerald-700 font-semibold text-lg">
                 Proceed to Payment
             </button>
         </form>
 
         <div class="mt-6 text-center">
-            <a href="{{ route('orders.show', $order) }}" class="text-blue-600 hover:underline">← Back to Order</a>
+            <a href="{{ route('orders.show', $order) }}" class="text-teal-600 hover:underline">← Back to Order</a>
         </div>
     </div>
 </div>

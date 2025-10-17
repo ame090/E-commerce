@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -24,7 +24,7 @@
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                                        <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold">
                                             {{ substr($customer->name, 0, 1) }}
                                         </div>
                                         <div class="ml-4">
@@ -53,7 +53,7 @@
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                                    <a href="{{ route('admin.customers.show', $customer) }}" class="text-blue-600 hover:text-blue-900">View</a>
+                                    <a href="{{ route('admin.customers.show', $customer) }}" class="text-teal-600 hover:text-blue-900">View</a>
                                     <form action="{{ route('admin.customers.toggle-status', $customer) }}" method="POST" class="inline">
                                         @csrf
                                         <button type="submit" class="text-indigo-600 hover:text-indigo-900">

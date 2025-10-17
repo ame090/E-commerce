@@ -1,10 +1,10 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('tickets.index') }}" class="text-blue-600 hover:underline">← Back to Tickets</a>
+            <a href="{{ route('tickets.index') }}" class="text-teal-600 hover:underline">← Back to Tickets</a>
         </div>
 
         <div class="bg-gray-50 p-6 rounded-lg">
@@ -38,14 +38,14 @@
                 <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
-                            <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-6 w-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
                             </svg>
                         </div>
                         <div class="ml-3 flex-1">
                             <h3 class="font-semibold text-blue-900 mb-2">Admin Reply:</h3>
                             <p class="text-blue-800 whitespace-pre-wrap">{{ $ticket->reply }}</p>
-                            <p class="text-sm text-blue-600 mt-2">Replied {{ $ticket->replied_at->diffForHumans() }}</p>
+                            <p class="text-sm text-teal-600 mt-2">Replied {{ $ticket->replied_at->diffForHumans() }}</p>
                         </div>
                     </div>
                 </div>

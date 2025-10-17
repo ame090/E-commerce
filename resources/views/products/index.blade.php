@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -12,10 +12,10 @@
             <form action="{{ route('products.index') }}" method="GET" class="space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div>
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search products..." class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Search products..." class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                     </div>
                     <div>
-                        <select name="category" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <select name="category" class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                             <option value="">All Categories</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->slug }}" {{ request('category') == $category->slug ? 'selected' : '' }}>{{ $category->name }}</option>
@@ -23,13 +23,13 @@
                         </select>
                     </div>
                     <div>
-                        <input type="number" name="min_price" value="{{ request('min_price') }}" placeholder="Min Price" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <input type="number" name="min_price" value="{{ request('min_price') }}" placeholder="Min Price" class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                     </div>
                     <div>
-                        <input type="number" name="max_price" value="{{ request('max_price') }}" placeholder="Max Price" class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <input type="number" name="max_price" value="{{ request('max_price') }}" placeholder="Max Price" class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                     </div>
                 </div>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Search</button>
+                <button type="submit" class="bg-emerald-600 text-white px-6 py-2 rounded-md hover:bg-emerald-700">Search</button>
             </form>
         </div>
 
@@ -52,7 +52,7 @@
                                     <span class="text-sm text-gray-600 ml-1">{{ number_format($product->getAverageRating(), 1) }} ({{ $product->getTotalReviews() }})</span>
                                 </div>
                                 <div class="flex items-center justify-between">
-                                    <span class="text-xl font-bold text-blue-600">RM {{ number_format($product->price, 2) }}</span>
+                                    <span class="text-xl font-bold text-teal-600">RM {{ number_format($product->price, 2) }}</span>
                                     @if($product->inStock())
                                         <span class="text-sm text-green-600">In Stock</span>
                                     @else

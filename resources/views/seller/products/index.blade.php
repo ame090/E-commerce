@@ -1,11 +1,11 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-bold">My Products</h1>
-            <a href="{{ route('seller.products.create') }}" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+            <a href="{{ route('seller.products.create') }}" class="bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                 + Add New Product
             </a>
         </div>
@@ -66,7 +66,7 @@
                                     @endif
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                                    <a href="{{ route('products.show', $product->slug) }}" class="text-blue-600 hover:text-blue-900" target="_blank">View</a>
+                                    <a href="{{ route('products.show', $product->slug) }}" class="text-teal-600 hover:text-blue-900" target="_blank">View</a>
                                     <a href="{{ route('seller.products.edit', $product) }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                     <form action="{{ route('seller.products.destroy', $product) }}" method="POST" class="inline">
                                         @csrf
@@ -90,7 +90,7 @@
                 </svg>
                 <h2 class="text-2xl font-semibold text-gray-600 mt-4">No products yet</h2>
                 <p class="text-gray-500 mt-2">Start adding products to your shop</p>
-                <a href="{{ route('seller.products.create') }}" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Add Your First Product</a>
+                <a href="{{ route('seller.products.create') }}" class="inline-block mt-6 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700">Add Your First Product</a>
             </div>
         @endif
     </div>

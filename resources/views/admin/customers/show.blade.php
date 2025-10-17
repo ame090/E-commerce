@@ -1,10 +1,10 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('admin.customers.index') }}" class="text-blue-600 hover:underline">← Back to Customers</a>
+            <a href="{{ route('admin.customers.index') }}" class="text-teal-600 hover:underline">← Back to Customers</a>
         </div>
 
         <div class="flex justify-between items-start mb-8">
@@ -81,7 +81,7 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <p class="text-sm text-gray-600">{{ $order->created_at->format('M d, Y') }}</p>
-                                <p class="font-bold text-blue-600">RM {{ number_format($order->total, 2) }}</p>
+                                <p class="font-bold text-teal-600">RM {{ number_format($order->total, 2) }}</p>
                             </div>
                         </div>
                     @empty

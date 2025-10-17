@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -15,21 +15,21 @@
                         <div class="space-y-4">
                             <div>
                                 <label for="shipping_address" class="block text-sm font-medium text-gray-700">Shipping Address</label>
-                                <textarea id="shipping_address" name="shipping_address" rows="3" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">{{ old('shipping_address', auth()->user()->address) }}</textarea>
+                                <textarea id="shipping_address" name="shipping_address" rows="3" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">{{ old('shipping_address', auth()->user()->address) }}</textarea>
                                 @error('shipping_address')
                                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div>
                                 <label for="shipping_phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                                <input type="text" id="shipping_phone" name="shipping_phone" required value="{{ old('shipping_phone', auth()->user()->phone) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                <input type="text" id="shipping_phone" name="shipping_phone" required value="{{ old('shipping_phone', auth()->user()->phone) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                                 @error('shipping_phone')
                                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div>
                                 <label for="notes" class="block text-sm font-medium text-gray-700">Order Notes (Optional)</label>
-                                <textarea id="notes" name="notes" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">{{ old('notes') }}</textarea>
+                                <textarea id="notes" name="notes" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">{{ old('notes') }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -81,11 +81,11 @@
                         <div class="border-t pt-4 mb-4">
                             <div class="flex justify-between font-bold text-lg">
                                 <span>Total</span>
-                                <span class="text-blue-600">RM {{ number_format($cartItems->sum(function($item) { return $item->price * $item->quantity; }) * 1.06 + 10, 2) }}</span>
+                                <span class="text-teal-600">RM {{ number_format($cartItems->sum(function($item) { return $item->price * $item->quantity; }) * 1.06 + 10, 2) }}</span>
                             </div>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">Place Order</button>
-                        <a href="{{ route('cart.index') }}" class="block w-full text-center mt-4 text-blue-600 hover:underline">Back to Cart</a>
+                        <button type="submit" class="w-full bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">Place Order</button>
+                        <a href="{{ route('cart.index') }}" class="block w-full text-center mt-4 text-teal-600 hover:underline">Back to Cart</a>
                     </div>
                 </div>
             </div>

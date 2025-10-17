@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -65,7 +65,7 @@
             <div class="bg-white shadow rounded-lg p-6">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-xl font-bold text-gray-800">Recent Orders</h2>
-                    <a href="{{ route('orders.index') }}" class="text-blue-600 hover:underline text-sm">View All →</a>
+                    <a href="{{ route('orders.index') }}" class="text-teal-600 hover:underline text-sm">View All →</a>
                 </div>
                 <div class="space-y-4">
                     @forelse($recentOrders as $order)
@@ -83,9 +83,9 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <p class="text-sm text-gray-600">{{ $order->items->count() }} items</p>
-                                <p class="font-bold text-blue-600">RM {{ number_format($order->total, 2) }}</p>
+                                <p class="font-bold text-teal-600">RM {{ number_format($order->total, 2) }}</p>
                             </div>
-                            <a href="{{ route('orders.show', $order) }}" class="text-blue-600 text-sm hover:underline mt-2 block">View Details →</a>
+                            <a href="{{ route('orders.show', $order) }}" class="text-teal-600 text-sm hover:underline mt-2 block">View Details →</a>
                         </div>
                     @empty
                         <p class="text-gray-500 text-center py-4">No orders yet</p>
@@ -126,7 +126,7 @@
 
         <!-- Quick Actions -->
         <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
-            <a href="{{ route('products.index') }}" class="bg-blue-600 text-white p-6 rounded-lg hover:bg-blue-700 text-center transition">
+            <a href="{{ route('products.index') }}" class="bg-emerald-600 text-white p-6 rounded-lg hover:bg-emerald-700 text-center transition">
                 <svg class="mx-auto h-8 w-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                 </svg>

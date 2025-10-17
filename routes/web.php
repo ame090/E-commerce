@@ -35,7 +35,7 @@ Route::get('/products/{slug}', [ProductController::class, 'show'])->name('produc
 require __DIR__.'/auth.php';
 
 // Authenticated Routes
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -84,7 +84,7 @@ Route::middleware('auth')->group(function () {
 });
 
 // Admin Routes
-Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     
     // Users
@@ -127,7 +127,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 });
 
 // Seller Routes
-Route::middleware(['auth'])->prefix('seller')->name('seller.')->group(function () {
+Route::middleware(['auth', 'verified'])->prefix('seller')->name('seller.')->group(function () {
     // Registration
     Route::get('/register', [SellerDashboardController::class, 'register'])->name('register');
     Route::post('/register', [SellerDashboardController::class, 'storeRegistration'])->name('register.store');
@@ -136,7 +136,7 @@ Route::middleware(['auth'])->prefix('seller')->name('seller.')->group(function (
     })->name('pending');
 });
 
-Route::middleware(['auth', 'seller'])->prefix('seller')->name('seller.')->group(function () {
+Route::middleware(['auth', 'verified', 'seller'])->prefix('seller')->name('seller.')->group(function () {
     Route::get('/dashboard', [SellerDashboardController::class, 'index'])->name('dashboard');
     
     // Products
@@ -155,7 +155,7 @@ Route::middleware(['auth', 'seller'])->prefix('seller')->name('seller.')->group(
 });
 
 // Customer Dashboard
-Route::middleware(['auth'])->prefix('customer')->name('customer.')->group(function () {
+Route::middleware(['auth', 'verified'])->prefix('customer')->name('customer.')->group(function () {
     Route::get('/dashboard', [CustomerDashboardController::class, 'index'])->name('dashboard');
 });
 

@@ -1,11 +1,11 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-bold">Support Tickets</h1>
-            <a href="{{ route('tickets.create') }}" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+            <a href="{{ route('tickets.create') }}" class="bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                 + Create Ticket
             </a>
         </div>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="text-right ml-4">
                                 <p class="text-sm text-gray-500">{{ $ticket->created_at->diffForHumans() }}</p>
-                                <a href="{{ route('tickets.show', $ticket) }}" class="text-blue-600 hover:underline text-sm mt-2 block">View Details →</a>
+                                <a href="{{ route('tickets.show', $ticket) }}" class="text-teal-600 hover:underline text-sm mt-2 block">View Details →</a>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                 </svg>
                 <h2 class="text-2xl font-semibold text-gray-600 mt-4">No tickets yet</h2>
                 <p class="text-gray-500 mt-2">Need help? Create a support ticket</p>
-                <a href="{{ route('tickets.create') }}" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Create Ticket</a>
+                <a href="{{ route('tickets.create') }}" class="inline-block mt-6 bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700">Create Ticket</a>
             </div>
         @endif
     </div>

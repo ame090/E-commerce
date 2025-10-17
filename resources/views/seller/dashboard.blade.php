@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -45,11 +45,11 @@
                                 </span>
                             </div>
                             <p class="text-sm text-gray-600 mt-2">RM {{ number_format($order->total, 2) }}</p>
-                            <a href="{{ route('seller.orders.show', $order) }}" class="text-blue-600 text-sm hover:underline mt-2 block">View Details →</a>
+                            <a href="{{ route('seller.orders.show', $order) }}" class="text-teal-600 text-sm hover:underline mt-2 block">View Details →</a>
                         </div>
                     @endforeach
                 </div>
-                <a href="{{ route('seller.orders.index') }}" class="block mt-4 text-blue-600 hover:underline">View all orders →</a>
+                <a href="{{ route('seller.orders.index') }}" class="block mt-4 text-teal-600 hover:underline">View all orders →</a>
             </div>
 
             <!-- Top Products -->
@@ -71,7 +71,7 @@
 
         <!-- Quick Actions -->
         <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <a href="{{ route('seller.products.create') }}" class="bg-blue-600 text-white p-6 rounded-lg hover:bg-blue-700 text-center">
+            <a href="{{ route('seller.products.create') }}" class="bg-emerald-600 text-white p-6 rounded-lg hover:bg-emerald-700 text-center">
                 <h3 class="font-semibold">Add New Product</h3>
             </a>
             <a href="{{ route('seller.products.index') }}" class="bg-green-600 text-white p-6 rounded-lg hover:bg-green-700 text-center">

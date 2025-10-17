@@ -1,10 +1,10 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('admin.tickets.index') }}" class="text-blue-600 hover:underline">← Back to Tickets</a>
+            <a href="{{ route('admin.tickets.index') }}" class="text-teal-600 hover:underline">← Back to Tickets</a>
         </div>
 
         <div class="bg-gray-50 p-6 rounded-lg mb-6">
@@ -60,7 +60,7 @@
                     <div>
                         <label for="reply" class="block text-sm font-medium text-gray-700 mb-2">Your Reply *</label>
                         <textarea id="reply" name="reply" required rows="6" 
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                             placeholder="Type your response...">{{ old('reply', $ticket->reply) }}</textarea>
                         @error('reply')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -70,7 +70,7 @@
                     <div>
                         <label for="status" class="block text-sm font-medium text-gray-700 mb-2">Update Status *</label>
                         <select id="status" name="status" required 
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                             <option value="open" {{ old('status', $ticket->status) == 'open' ? 'selected' : '' }}>Open</option>
                             <option value="in_progress" {{ old('status', $ticket->status) == 'in_progress' ? 'selected' : '' }}>In Progress</option>
                             <option value="closed" {{ old('status', $ticket->status) == 'closed' ? 'selected' : '' }}>Closed</option>
@@ -80,7 +80,7 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                    <button type="submit" class="w-full bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                         Send Reply & Update Status
                     </button>
                 </form>

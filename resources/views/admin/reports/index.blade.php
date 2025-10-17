@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -74,7 +74,7 @@
                                 <span class="text-sm font-bold">{{ $count }} ({{ number_format($percentage, 1) }}%)</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="h-2 rounded-full {{ $status == 'delivered' ? 'bg-green-500' : ($status == 'cancelled' ? 'bg-red-500' : 'bg-blue-500') }}" 
+                                <div class="h-2 rounded-full {{ $status == 'delivered' ? 'bg-green-500' : ($status == 'cancelled' ? 'bg-red-500' : 'bg-emerald-500') }}" 
                                      style="width: {{ $percentage }}%"></div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="font-bold text-blue-600">{{ $product->total_sold }} sold</p>
+                                <p class="font-bold text-teal-600">{{ $product->total_sold }} sold</p>
                                 <p class="text-sm text-gray-600">RM {{ number_format($product->price, 2) }}</p>
                             </div>
                         </div>

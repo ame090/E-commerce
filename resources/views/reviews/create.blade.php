@@ -1,10 +1,10 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('orders.show', $order) }}" class="text-blue-600 hover:underline">← Back to Order</a>
+            <a href="{{ route('orders.show', $order) }}" class="text-teal-600 hover:underline">← Back to Order</a>
         </div>
 
         <h1 class="text-3xl font-bold mb-8">Write a Review</h1>
@@ -45,7 +45,7 @@
             <div>
                 <label for="comment" class="block text-sm font-medium text-gray-700 mb-2">Your Review</label>
                 <textarea id="comment" name="comment" rows="6" 
-                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                     placeholder="Share your experience with this product...">{{ old('comment') }}</textarea>
                 @error('comment')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -66,7 +66,7 @@
                 <a href="{{ route('orders.show', $order) }}" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-300">
                     Cancel
                 </a>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                <button type="submit" class="bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                     Submit Review
                 </button>
             </div>

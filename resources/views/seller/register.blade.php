@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
@@ -15,7 +15,7 @@
                 <div class="mb-6">
                     <label for="shop_name" class="block text-sm font-medium text-gray-700 mb-2">Shop Name *</label>
                     <input type="text" id="shop_name" name="shop_name" required value="{{ old('shop_name') }}" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="Enter your shop name">
                     @error('shop_name')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -25,7 +25,7 @@
                 <div class="mb-6">
                     <label for="description" class="block text-sm font-medium text-gray-700 mb-2">Shop Description</label>
                     <textarea id="description" name="description" rows="4" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="Tell customers about your shop">{{ old('description') }}</textarea>
                     @error('description')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -44,19 +44,19 @@
 
                 <div class="flex items-center mb-6">
                     <input type="checkbox" id="terms" name="terms" required
-                        class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        class="rounded border-gray-300 text-teal-600 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                     <label for="terms" class="ml-2 text-sm text-gray-700">
-                        I agree to the <a href="#" class="text-blue-600 hover:underline">Terms and Conditions</a> for sellers
+                        I agree to the <a href="#" class="text-teal-600 hover:underline">Terms and Conditions</a> for sellers
                     </label>
                 </div>
 
-                <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                <button type="submit" class="w-full bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                     Submit Application
                 </button>
             </form>
 
             <div class="mt-6 text-center">
-                <a href="{{ route('home') }}" class="text-blue-600 hover:underline">← Back to Home</a>
+                <a href="{{ route('home') }}" class="text-teal-600 hover:underline">← Back to Home</a>
             </div>
         </div>
     </div>

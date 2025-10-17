@@ -1,10 +1,10 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="bg-white">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-6">
-            <a href="{{ route('seller.products.index') }}" class="text-blue-600 hover:underline">← Back to Products</a>
+            <a href="{{ route('seller.products.index') }}" class="text-teal-600 hover:underline">← Back to Products</a>
         </div>
 
         <h1 class="text-3xl font-bold mb-8">Edit Product</h1>
@@ -17,7 +17,7 @@
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Product Name *</label>
                 <input type="text" id="name" name="name" required value="{{ old('name', $product->name) }}" 
-                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                     placeholder="Enter product name">
                 @error('name')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -28,7 +28,7 @@
             <div>
                 <label for="category_id" class="block text-sm font-medium text-gray-700 mb-2">Category *</label>
                 <select id="category_id" name="category_id" required 
-                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                     <option value="">Select a category</option>
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}" {{ old('category_id', $product->category_id) == $category->id ? 'selected' : '' }}>
@@ -45,7 +45,7 @@
             <div>
                 <label for="description" class="block text-sm font-medium text-gray-700 mb-2">Description</label>
                 <textarea id="description" name="description" rows="4" 
-                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                     placeholder="Enter product description">{{ old('description', $product->description) }}</textarea>
                 @error('description')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -57,7 +57,7 @@
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 mb-2">Price (RM) *</label>
                     <input type="number" id="price" name="price" required step="0.01" min="0" value="{{ old('price', $product->price) }}" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="0.00">
                     @error('price')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -67,7 +67,7 @@
                 <div>
                     <label for="compare_price" class="block text-sm font-medium text-gray-700 mb-2">Compare Price (RM)</label>
                     <input type="number" id="compare_price" name="compare_price" step="0.01" min="0" value="{{ old('compare_price', $product->compare_price) }}" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="0.00">
                     <p class="mt-1 text-xs text-gray-500">Original price (for showing discount)</p>
                     @error('compare_price')
@@ -81,7 +81,7 @@
                 <div>
                     <label for="stock" class="block text-sm font-medium text-gray-700 mb-2">Stock Quantity *</label>
                     <input type="number" id="stock" name="stock" required min="0" value="{{ old('stock', $product->stock) }}" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="0">
                     @error('stock')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -91,7 +91,7 @@
                 <div>
                     <label for="sku" class="block text-sm font-medium text-gray-700 mb-2">SKU</label>
                     <input type="text" id="sku" name="sku" value="{{ old('sku', $product->sku) }}" 
-                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500"
                         placeholder="Product SKU">
                     <p class="mt-1 text-xs text-gray-500">Stock Keeping Unit (optional)</p>
                     @error('sku')
@@ -131,7 +131,7 @@
             <div>
                 <label for="images" class="block text-sm font-medium text-gray-700 mb-2">Add New Images (Optional)</label>
                 <input type="file" id="images" name="images[]" multiple accept="image/*" 
-                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-blue-500">
                 <p class="mt-1 text-xs text-gray-500">Upload new images to add to existing ones (JPEG, PNG, GIF, max 2MB each)</p>
                 @error('images')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -163,7 +163,7 @@
                 <a href="{{ route('seller.products.index') }}" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-md hover:bg-gray-300">
                     Cancel
                 </a>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 font-semibold">
+                <button type="submit" class="bg-emerald-600 text-white px-6 py-3 rounded-md hover:bg-emerald-700 font-semibold">
                     Update Product
                 </button>
             </div>
